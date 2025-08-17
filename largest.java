@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class largest {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int ind=0;ind<n; ind++){
+            arr[ind]=sc.nextInt();
+        }
+
+        int largest = arr[0];
+        for(int ind = 0; ind < n; ind++){
+            if(largest < arr[ind])
+                largest = arr[ind];
+        }
+        System.out.println(largest);
+        sc.close();
+    }
+}
